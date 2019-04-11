@@ -1,0 +1,88 @@
+# ignore everything in the root except the "wp-content" directory.
+/*
+!wp-content/
+/index.php
+# ignore everything in the "wp-content" directory, except:
+# mu-plugins, plugins, and themes directories
+wp-content/*
+#!wp-content/plugins/
+!wp-content/themes/
+
+# ignore all mu-plugins, plugins, and themes
+# unless explicitly whitelisted at the end of this file
+wp-content/plugins/*
+wp-content/themes/*
+
+# ignore all files starting with . or ~
+.*
+~*
+
+# ignore OS generated files
+ehthumbs.db
+Thumbs.db
+
+# ignore Editor files
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+.idea/
+
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# -------------------------
+# BEGIN Whitelisted Files
+# -------------------------
+
+# track these files, if they exist
+!.gitignore
+!.editorconfig
+!.phpcs.xml.dist
+!README.md
+!CHANGELOG.md
+!composer.json
+!wp-config-sample.php
+
+# track favicon files, if they exist
+!android-chrome-*.png
+!apple-touch-icon*.png
+!browserconfig.xml
+!favicon*.png
+!favicon*.ico
+!manifest.json
+!mstile-*.png
+!safari-pinned-tab.svg
+!site.webmanifest
+
+# track theme files
+!wp-content/themes/theme-name/
+!wp-content/themes/theme-name/webpack.config.js
+# ignore in theme
+wp-content/themes/theme-name/style.css
+wp-content/themes/theme-name/bundle.js
+wp-content/themes/theme-name/bundle.js.*
+wp-content/themes/theme-name/dashboard_bundle.js
+wp-content/themes/theme-name/dashboard_bundle.js.*
+# ignore node dependency directories
+wp-content/themes/theme-name/node_modules/
